@@ -2,5 +2,5 @@
 
 class Movie
     #attributes of a movie
-    attr_accessor :title, :director, :year
+    attr_accessor :title, :director, :year, :id
 end
