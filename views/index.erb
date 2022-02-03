@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Movie Catalogue</title>
-<link rel="stylesheet" type="text/css" href="../stylesheets.css">
+    <link rel="stylesheet" type="text/css" href="/../stylesheets.css">
 </head>
 <body>
     <h1>Movie Catalogue</h1>
     <ul>
-        <li>movie 1</li>
-        <li>movie 2</li>
-        <li>movie 3</li>
+    <!--ruby code to list movies starts here-->
+    <!--process each movie item and return movie title as list item-->
+    <% @movies.each do |movie| %>
+        <li><%= movie.title %></li>
+        <% end %>
+    <!--end of ruby code-->
     </ul>
     <a href="/movies/new">Add new movie</a>
 </body>
