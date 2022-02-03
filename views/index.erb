@@ -10,7 +10,11 @@
     <!--ruby code to list movies starts here-->
     <!--process each movie item and return movie title as list item-->
     <% @movies.each do |movie| %>
-        <li><%= movie.title %></li>
+        <li>
+        <!--add link to list item with ref to movie id-->
+        <!--movie title will be displayed as link text-->
+        <a href="/movies/<%= movie.id %>"><%= movie.title %></a>
+        </li>
         <% end %>
     <!--end of ruby code-->
     </ul>
