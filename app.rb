@@ -28,6 +28,8 @@ end
 
 #create new catalogue item based on input from new.erb
 post('/movies/create') do
-    #return received parameters from input
-    "Received: #{params.inspect}"
+    @movie = Movie.new
+    @movie.title = params['title']
+    @movie.director = params['director']
+    @movie.year = params['year']
 end
