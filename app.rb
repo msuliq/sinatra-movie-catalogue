@@ -3,6 +3,8 @@
 #add sinatra library
 require 'sinatra'
 
+#action after receiveing GET /movies
 get ('/movies') do
-'Coming soon...'
+    #open index.erb file
+    erb :index
 end
