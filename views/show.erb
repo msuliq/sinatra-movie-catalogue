@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="En">
+<head>
+<meta charset="UTF-8">
+<!--movie title from movie_store.rb added to page title-->
+    <title>Movie Catalogue - <%= @movie.title %></title>
+</head>
+<body>
+<h1><%= @movie.title %></h1>
+<!--display of stored movie data-->
+<table>
+<tr>
+<td class="left">Title:</td>
+<td><%= @movie.title %></td>
+</tr>
+<tr>
+<td class="left">Director:</td>
+<td><%= @movie.director %></td>
+</tr>
+<tr>
+<td class="left">Year Published:</td>
+<td><%= @movie.year %></td>
+</tr>
+</table>
+<a href="/movies">Back to main page.</a>
+</body>
+</html>
