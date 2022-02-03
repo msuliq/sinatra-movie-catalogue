@@ -5,8 +5,8 @@ require 'sinatra'
 #load movie.rb file to get movie items
 require 'movie'
 
-#action after receiveing GET /movies
-get ('/movies') do
+#action after receiveing GET for list of /movies
+get('/movies') do
     #create new array
     @movies = []
     #create first item
@@ -18,4 +18,10 @@ get ('/movies') do
     @movies[2].title = "Terminator 2"
     #open index.erb file
     erb :index
+end
+
+#action after receiving GET to add movies/new
+get('/movies/new') do
+    #open new.erb
+    erb :new
 end
