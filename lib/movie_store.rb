@@ -8,6 +8,12 @@ class MovieStore
         #pathway to storage file
         @store = YAML::Store.new(file_name)
     end
+    #find movie id to display list items as links
+    def find(id)
+        @store.transaction do
+            @store[id]
+        end
+    end
     #load all movies stored
     def all
         #required call

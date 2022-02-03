@@ -34,3 +34,13 @@ post('/movies/create') do
     #redirect back to the previous page
     redirect '/movies/new'
 end
+
+#fetch movie id from storage file 
+get('/movies/:id') do
+    #convern id parameter to integer
+    id = params['id'].to_i
+    #use id to load object from storage file
+    @movie = store.find(id)
+    #movie data is sent to html in show.erb
+    erb :show
+end
