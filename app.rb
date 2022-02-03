@@ -17,11 +17,17 @@ get('/movies') do
     @movies[2] = Movie.new
     @movies[2].title = "Terminator 2"
     #open index.erb file
-    erb :index, :layout => :layout
+    erb :index
 end
 
 #action after receiving GET to add movies/new
 get('/movies/new') do
     #open new.erb
-    erb :new, :layout => :layout
+    erb :new
+end
+
+#create new catalogue item based on input from new.erb
+post('/movies/create') do
+    #return received parameters from input
+    "Received: #{params.inspect}"
 end

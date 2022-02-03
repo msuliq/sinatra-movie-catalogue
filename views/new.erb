@@ -6,8 +6,9 @@
 </head>
 <body>
 <h1>Add new movie</h1>
-<!--form to add new movies-->
-<form>
+<!--form to add new movies using POST-->
+<form method="post" action="/movies/create">
+<!--table for input data-->
 <table>
 <tr>
 <td class="left"><label for="title">Title:</label></td>
@@ -21,6 +22,7 @@
 <td class="left"><label for="year">Year:</label></td>
 <td><input type=text name="year"></td>
 </tr>
+<!--submit button-->
 <tr>
 <td class="left"><input type="submit"></td>
 </tr>
