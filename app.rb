@@ -4,6 +4,10 @@
 require 'sinatra'
 #load movie.rb file to get movie items
 require 'movie'
+#load movie_store.rb to store newly added items
+require 'movie_store'
+#storing done through creating new MovieStore class and storage in movies.yml file
+store = MovieStore.new('movies.yml')
 
 #action after receiveing GET for list of /movies
 get('/movies') do
