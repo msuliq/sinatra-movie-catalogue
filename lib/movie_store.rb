@@ -8,6 +8,14 @@ class MovieStore
         #pathway to storage file
         @store = YAML::Store.new(file_name)
     end
+    #load all movies stored
+    def all
+        #required call
+        @store.transaction do
+            #create array with all id keys
+            @store.roots.map { |id| @store[id] }
+        end
+    end
     #set method for saving a movie as catalogue item
     def save(movie)
         #required transaction call

@@ -11,15 +11,8 @@ store = MovieStore.new('movies.yml')
 
 #action after receiveing GET for list of /movies
 get('/movies') do
-    #create new array
-    @movies = []
-    #create first item
-    @movies[0] = Movie.new
-    @movies[0].title = "Jaws"
-    @movies[1] = Movie.new
-    @movies[1].title = "Alien"
-    @movies[2] = Movie.new
-    @movies[2].title = "Terminator 2"
+    #fetch all stored catalogue items
+    @movies = store.all
     #open index.erb file
     erb :index
 end
