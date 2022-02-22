@@ -3,9 +3,9 @@
 #add sinatra library
 require 'sinatra'
 #load movie.rb file to get movie items
-require 'movie'
+require_relative 'lib/movie'
 #load movie_store.rb to store newly added items
-require 'movie_store'
+require_relative 'lib/movie_store'
 #storing done through creating new MovieStore class and storage in movies.yml file
 store = MovieStore.new('movies.yml')
 
